@@ -1,0 +1,135 @@
+# Squirrel settings
+# encoding: utf-8
+#
+# squirrel[.custom].yaml 是鼠须管的前端配置文件，小狼毫是 weasel[.custom].yaml
+# 各平台皮肤配置并不一致。
+#
+# 鼠须管内置皮肤展示： https://github.com/NavisLab/rime-pifu
+# 鼠须管界面配置指南： https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/鼠鬚管介面配置指南.md
+# 鼠须管作者写的图形化的皮肤设计器： https://github.com/LEOYoon-Tsaw/Squirrel-Designer
+
+# 要比共享目录的同名文件的 config_version 大才可以生效
+config_version: '2023-12-01'
+
+
+# options: last | default | _custom_
+# last: the last used latin keyboard layout
+# default: US (ABC) keyboard layout
+# _custom_: keyboard layout of your choice, e.g. 'com.apple.keylayout.USExtended' or simply 'USExtended'
+keyboard_layout: default
+# for veteran chord-typist
+chord_duration: 0.1  # seconds
+# options: always | never | appropriate
+show_notifications_when: appropriate
+
+
+# ascii_mode、inline、no_inline、vim_mode 等等设定
+# 可参考 /Library/Input Methods/Squirrel.app/Contents/SharedSupport/squirrel.yaml
+app_options:
+  # com.apple.Spotlight:
+  #   ascii_mode: true    # 开启默认英文
+  # com.microsoft.VSCode:
+  #   ascii_mode: false   # 关闭默认英文
+
+
+style:
+  # 选择皮肤，亮色与暗色主题
+  color_scheme: macos_dark
+  color_scheme_dark: macos_dark
+
+  # 预设选项。如果皮肤没写，则使用这些属性；如果皮肤写了，使用皮肤的。
+  text_orientation: horizontal  # horizontal | vertical
+  inline_preedit: true
+  corner_radius: 10
+  hilited_corner_radius: 0
+  border_height: 0
+  border_width: 0
+  line_spacing: 5
+  spacing: 10
+  #candidate_format: '%c. %@'
+  #base_offset: 6
+  font_face: 'Lucida Grande'
+  font_point: 21
+  #label_font_face: 'Lucida Grande'
+  label_font_point: 18
+  #comment_font_face: 'Lucida Grande'
+  comment_font_point: 18
+
+
+patch:
+  style/color_scheme: macos_dark   # 将皮肤名称输入在此处
+  style/horizontal: true
+  text_orientation: vertical  # horizontal | vertical
+  inline_preedit: true
+  corner_radius: 10
+  hilited_corner_radius: 0
+  border_height: 0
+  border_width: 0
+  # space between candidates in stacked layout
+  line_spacing: 5
+  # space between preedit and candidates in non-inline mode
+  spacing: 10
+  #candidate_format: '%c. %@'
+  #base_offset: 0
+  font_face: 'Lucida Grande'
+  font_point: 21
+  #label_font_face: 'Lucida Grande'
+  label_font_point: 18
+ 
+  preset_color_schemes:
+    native:
+      name: 系統配色
+
+    macos_light:
+      name: Mac仿原生亮色/macos_light
+      author: 一方
+      back_color: 0xFFFFFF    # 候选条背景色，24位色值，16进制，BGR顺序
+      border_color: 0xFFFFFF    # 边框色
+      text_color: 0x424242    # 拼音行文字颜色
+      hilited_back_color: 0xD75A00    # 第一候选项背景背景色
+      hilited_candidate_text_color: 0xFFFFFF    # 第一候选项文字颜色
+      hilited_candidate_label_color: 0xFFFFFF   # 第一候选项编号颜色
+      hilited_comment_text_color: 0x999999    # 注解文字高亮
+      hilited_text_color: 0x999999    # 高亮拼音 (需要开启内嵌编码)
+      candidate_text_color: 0x3c3c3c    # 预选项文字颜色
+      comment_text_color: 0x999999    # 拼音等提示文字颜色
+      horizontal: true    # 水平排列
+      inline_preedit: true    # 单行显示，false双行显示
+      label_color: 0x999999   # 预选栏编号颜色
+      candidate_format: "%c\u2005%@"    # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
+      font_face: "PingFangSC"   # 候选词编号字体
+      font_point: 17    # 候选文字大小
+      label_font_point: 13    # 候选编号大小
+      corner_radius: 5    # 候选条圆角
+      hilited_corner_radius: 5    # 高亮圆角
+      border_height: 4     # 窗口上下高度
+      border_width: 4   # 窗口左右宽度
+      border_color_width: 0   #输入条边框宽度
+      #label_font_face: "SFCompactText-Regular"  # 候选词编号字体
+
+    macos_dark:
+      name: Mac仿原生暗色/macos_dark
+      author: 一方
+      back_color: 0x252a2e    # 候选条背景色，24位色值，16进制，BGR顺序
+      border_color: 0x050505    # 边框色
+      text_color: 0x424242    # 拼音行文字颜色
+      hilited_back_color: 0xD75A00    # 第一候选项背景背景色
+      hilited_candidate_text_color: 0xFFFFFF    # 第一候选项文字颜色
+      hilited_candidate_label_color: 0xFFFFFF   # 第一候选项编号颜色
+      hilited_comment_text_color: 0x999999    # 注解文字高亮
+      hilited_text_color: 0x999999    # 高亮拼音 (需要开启内嵌编码)
+      candidate_text_color: 0xe9e9ea    # 预选项文字颜色
+      comment_text_color: 0x999999    # 拼音等提示文字颜色
+      horizontal: false    # 水平排列
+      inline_preedit: true    # 单行显示，false双行显示
+      label_color: 0x999999   # 预选栏编号颜色
+      candidate_format: "%c\u2005%@"    # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
+      font_face: "PingFangSC"   # 候选词编号字体
+      font_point: 17    # 候选文字大小
+      label_font_point: 13    # 候选编号大小
+      corner_radius: 5    # 候选条圆角
+      hilited_corner_radius: 5    # 高亮圆角
+      border_height: 4     # 窗口上下高度
+      border_width: 4   # 窗口左右宽度
+      border_color_width: 0   #输入条边框宽度
+      #label_font_face: "SFCompactText-Regular"  # 候选词编号字体
