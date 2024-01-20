@@ -15,6 +15,7 @@ function M.init(env)
     M.date = config:get_string(env.name_space .. '/date') or 'rq'
     M.time = config:get_string(env.name_space .. '/time') or 'sj'
     M.week = config:get_string(env.name_space .. '/week') or 'xq'
+    M.gt = config:get_string(env.name_space .. '/gt') or 'gt'
     M.datetime = config:get_string(env.name_space .. '/datetime') or 'dt'
     M.timestamp = config:get_string(env.name_space .. '/timestamp') or 'ts'
 end
@@ -44,9 +45,17 @@ function M.func(input, seg, env)
         yield_cand(seg, '周' .. text)
 
     -- ISO 8601/RFC 3339 的时间格式 （固定东八区）（示例 2022-01-07T20:42:51+08:00）
+    elseif (input == M.gt) then
+        local current_time = os.time()
+        yield_cand(seg, os.date('%Y-%m-%d %H:%M:%S', current_time))
+        yield_cand(seg, os.date('%Y-%m-%dT%H:%M:%S+08:00', current_time))
+        yield_cand(seg, os.date('%Y%m%d%H%M%S', current_time))
+
+    -- ISO 8601/RFC 3339 的时间格式 （固定东八区）（示例 2022-01-07T20:42:51+08:00）
     elseif (input == M.datetime) then
         local current_time = os.time()
         yield_cand(seg, os.date('%Y-%m-%dT%H:%M:%S+08:00', current_time))
+        yield_cand(seg, os.date('%Y-%m-%d %H:%M:%S', current_time))
         yield_cand(seg, os.date('%Y%m%d%H%M%S', current_time))
 
     -- 时间戳（十位数，到秒，示例 1650861664）

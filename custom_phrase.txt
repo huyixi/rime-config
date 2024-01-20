@@ -214,7 +214,6 @@ go	go
 Golang	golang
 Hugo	hugo
 goto	goto
-domain	domain
 TODO	todo
 Dota	dota
 main	main
