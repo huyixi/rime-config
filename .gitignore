@@ -20,3 +20,16 @@ cn_dicts/temp.txt
 rime_console
 rime_deployer
 rime_patch
+*.DS_Store
+node_modules
+*.log
+idea/
+*.local
+.DS_Store
+dist
+.cache
+.idea
+logs
+*-debug.log
+*-error.log
+*__pycache__/

@@ -11,7 +11,6 @@
 # 要比共享目录的同名文件的 config_version 大才可以生效
 config_version: '2023-12-01'
 
-
 # options: last | default | _custom_
 # last: the last used latin keyboard layout
 # default: US (ABC) keyboard layout
@@ -22,7 +21,6 @@ chord_duration: 0.1  # seconds
 # options: always | never | appropriate
 show_notifications_when: appropriate
 
-
 # ascii_mode、inline、no_inline、vim_mode 等等设定
 # 可参考 /Library/Input Methods/Squirrel.app/Contents/SharedSupport/squirrel.yaml
 app_options:
@@ -30,7 +28,6 @@ app_options:
   #   ascii_mode: true    # 开启默认英文
   # com.microsoft.VSCode:
   #   ascii_mode: false   # 关闭默认英文
-
 
 style:
   # 选择皮肤，亮色与暗色主题
@@ -55,11 +52,10 @@ style:
   #comment_font_face: 'Lucida Grande'
   comment_font_point: 18
 
-
 patch:
   style/color_scheme: macos_dark   # 将皮肤名称输入在此处
   style/horizontal: true
-  text_orientation: vertical  # horizontal | vertical
+  text_orientation: horizontal
   inline_preedit: true
   corner_radius: 10
   hilited_corner_radius: 0
