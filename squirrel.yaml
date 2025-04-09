@@ -1,0 +1,22 @@
+# Squirrel settings
+# encoding: utf-8
+#
+# squirrel[.custom].yaml 是鼠须管的前端配置文件，小狼毫是 weasel[.custom].yaml
+# 各平台皮肤配置并不一致。
+#
+# 鼠须管内置皮肤展示： https://github.com/NavisLab/rime-pifu
+# 鼠须管界面配置指南： https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/鼠鬚管介面配置指南.md
+# 鼠须管作者写的图形化的皮肤设计器： https://github.com/LEOYoon-Tsaw/Squirrel-Designer
+
+# 要比共享目录的同名文件的 config_version 大才可以生效
+config_version: "2023-12-01"
+
+# options: last | default | _custom_
+# last: the last used latin keyboard layout
+# default: US (ABC) keyboard layout
+# _custom_: keyboard layout of your choice, e.g. 'com.apple.keylayout.USExtended' or simply 'USExtended'
+keyboard_layout: default
+# for veteran chord-typist
+chord_duration: 0.1 # seconds
+# options: always | never | appropriate
+show_notifications_when: appropriate
