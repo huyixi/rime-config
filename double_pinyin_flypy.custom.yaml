@@ -2,7 +2,7 @@ patch:
   switches:
     - name: ascii_mode
       states: [中, Ａ]
-      reset: 0
+      reset: 1
     - name: ascii_punct # 中英标点
       states: [¥, $]
       # reset: 1

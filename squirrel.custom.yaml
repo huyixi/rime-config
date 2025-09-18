@@ -13,10 +13,10 @@ patch:
       ascii_mode: true
   style:
     # 选择皮肤，亮色与暗色主题
-    color_scheme: macos_light
-    color_scheme_dark: macos_dark
-    # color_scheme: wechat_light
-    # color_scheme_dark: wechat_dark
+    # color_scheme: macos_light
+    # color_scheme_dark: macos_dark
+    color_scheme: wechat_light
+    color_scheme_dark: wechat_dark
 
   preset_color_schemes:
     macos_light:
