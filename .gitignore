@@ -33,3 +33,17 @@ logs
 *-debug.log
 *-error.log
 *__pycache__/
+
+# 词库维护工具（普通用户不需要）
+others/script/
+others/recipes/
+others/*.txt
+
+# 其他双拼方案（只用小鹤）
+en_dicts/*_abc.dict.yaml
+en_dicts/*_mspy.dict.yaml
+en_dicts/*_sogou.dict.yaml
+en_dicts/*_ziguang.dict.yaml
+
+# 更新日志（可选）
+others/CHANGELOG.md
