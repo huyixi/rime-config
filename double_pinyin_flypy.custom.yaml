@@ -4,7 +4,7 @@ patch:
       states: [中, Ａ]
       reset: 1
     - name: ascii_punct # 中英标点
-      states: [¥, $]
+      states: [$, $]
       # reset: 1
     - name: full_shape
       states: [半角, 全角]
